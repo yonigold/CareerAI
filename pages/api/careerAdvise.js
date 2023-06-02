@@ -12,7 +12,7 @@ const careerPath = async (req) => {
     current role: ${currentRole}
     skills: ${skills}
     goals: ${goals}
-    Based on this information, suggest a career progression plan or a career advise including potential next roles, additional skills to acquire, and strategies to achieve the stated goals.
+    Based on this information, suggest a career progression plan or a career advise including potential next roles, additional skills to acquire, and strategies to achieve the stated goals. Make it short and concise (no more than 3-4 sentences)
     `;
     try {
       const response =  await fetch('https://api.openai.com/v1/chat/completions', {

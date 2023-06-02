@@ -13,7 +13,7 @@ const salary = async (req) => {
     experience: ${experience}
     country: ${country}
     education: ${education}
-    Given this information, provide a general salary range that could be expected for this role, based on the last available data. Also, explain in short the factors that typically influence the salary for this role.
+    Given this information, provide a general salary range that could be expected for this role, based on the last available data. No nee to add any more details.
     `;
     try {
       const response =  await fetch('https://api.openai.com/v1/chat/completions', {
@@ -35,7 +35,7 @@ const salary = async (req) => {
                   content: prompt
               }
           ],
-          max_tokens: 700,
+          max_tokens: 400,
           temperature: 0,
           })
           
