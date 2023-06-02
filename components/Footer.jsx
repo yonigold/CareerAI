@@ -8,7 +8,7 @@ function Footer() {
         </div>
     <p className="opacity-370 text-center text-white"> 
         Made with ❤️ by <a href="
-        https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="underline">Yonatan Goldshtein.</a></p>
+        https://twitter.com/yonigold14?s=21&t=r9WjV3geZvcLI2EcCo3dYg" target="_blank" rel="noopener noreferrer" className="underline">Yonatan Goldshtein.</a></p>
      <p>Powered by <a href="https://openai.com/" className="underline hover:text-indigo-300">OpenAI</a>.</p>
     
     
