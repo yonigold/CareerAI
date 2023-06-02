@@ -1,10 +1,29 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Head from 'next/head'
 
 export default function Home() {
   return (
    <>
+    <Head>
+        <title>CareerHub AI | Home</title>
+        <meta name="description" content="CareerHub AI is a free AI-powered career discovery platform that helps you find the right career path, get the salary you deserve, and go further in your career." />
+        <meta name="keywords" content="CareerHub AI, CareerHubAI, CareerHub, Career Hub, CareerHub.ai, CareerHubAI.com, CareerHub AI.com" />
+        <meta property="og:title" content="CareerHub AI | Home" />
+        <meta property="og:description" content="CareerHub AI is a free AI-powered career discovery platform that helps you find the right career path, get the salary you deserve, and go further in your career." />
+        <meta property="og:image" content="https://careerhub.ai/og-image.png" />
+        <meta property="og:url" content="https://careerhub-ai.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="CareerHub AI" />
+        <favicon href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
+        
+    </Head>
+
+
+
+
    <div className=''>
 
 
