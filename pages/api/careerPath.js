@@ -10,7 +10,7 @@ const careerPath = async (req) => {
     await req.json();
   const prompt = `Given that the user's most important job preference is ${mostImportantJobPrefernce},
      they have interests in ${jobPrefernces}, and they also value ${moreJobDetails},
-     what are 2 suitable career paths for them?
+     what are 2 suitable career paths for them? respond like you are talking to the user.
     `;
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {

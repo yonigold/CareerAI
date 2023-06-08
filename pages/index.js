@@ -36,7 +36,19 @@ export default function Home() {
         Find the job you love, get the salary you deserve, and go further in your career.
         
     </h2>
-</div>
+
+    <a 
+      href="https://www.producthunt.com/posts/careerhub-ai?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-careerhub&#0045;ai" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      <img 
+        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=398003&theme=light" 
+        alt="CareerHub&#0032;AI - One&#0045;stop&#0032;platform&#0032;for&#0032;your&#0032;career | Product Hunt" 
+        style={{width: '250px', height: '54px'}} 
+        className='mx-auto mt-10'
+      />
+    </a></div>
 
 <div className="flex flex-col md:flex-row justify-around items-center p-4 md:space-y-0 space-y-4 md:space-x-4 mt-10 lg:m-5">
     {[{page: 'CareerPath', subtitle: 'let AI help you uncover career paths you might excel in based on your intrests.', title: 'Discover Career Paths', img: '/careerpath.png'}, 
@@ -59,7 +71,7 @@ export default function Home() {
 
 
 <div className="flex flex-col md:flex-row justify-center items-center p-4 md:space-y-0 space-y-4 md:space-x-4 mt-10">
-    {['Resume Builder', 'Career Discovery'].map(i => (
+    {['Resume Builder', 'Cover letter Writer'].map(i => (
         <div key={i} className="border-4 border-white rounded-lg p-12 w-3/5 md:w-2/5 h-auto text-center shadow-2xl transform transition-all hover:scale-110">
             <h3 className="text-3xl font-bold text-black mb-4 text-center">{i}</h3>
             <p className="text-black text-xl mb-6">Coming Soon</p>

@@ -66,7 +66,7 @@ function CareerPath() {
     <div className="text-center pt-10">
     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black tracking-tighter mb-2 ">Discover Your <span className='text-amber-600 underline'>Career Path</span> </h1>
     <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black opacity-70 text-center">
-        Simply answer a few questions and let AI help you uncover career paths you might excel in based on your intrests.
+        Simply answer a few questions and let AI help you uncover career paths you might excel in based on your interests.
     </h2>
 </div>
 
@@ -101,7 +101,7 @@ function CareerPath() {
             maxLength={200}
             ></textarea>
              {errors.jobPrefernces && <p className="text-red-500">{errors.jobPrefernces}</p>}
-            <label className="block mb-2 text-black font-bold text-lg">What are your job prefernces?</label>
+            <label className="block mb-2 text-black font-bold text-lg">What are your job Preferences?</label>
             <textarea className="w-full p-2 h-32 border-2 border-black rounded-lg"
             value={moreJobDetails}
             onChange={(e) => setMoreJobDetails(e.target.value)}
