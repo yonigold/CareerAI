@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -18,7 +19,9 @@ export default function App({ Component, pageProps }) {
           gtag('config', 'G-KSJ9FSNXWZ');
         `}
       </Script>
+    <AuthProvider>
       <Component {...pageProps} />
+      </AuthProvider>
       <Analytics />
     </>
   );
