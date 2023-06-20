@@ -16,6 +16,7 @@ const coverLetter = async (req) => {
     writing style: ${writingStyle}
     about me: ${aboutMe}
     Based on this information, write a cover letter for a job application. 
+    The cover letter should not be long, it should be short and concise.
     Divide the cover letter into the following sections:
 - Intro
 - Body
@@ -24,6 +25,7 @@ Always Return the answer in the following format and in no other:
 Intro: {write the introductory paragraph here}
 Body: {write the body paragraphs here}
 Conclusion: {write the concluding paragraph here}
+
     `;
     try {
       const response =  await fetch('https://api.openai.com/v1/chat/completions', {
@@ -33,7 +35,7 @@ Conclusion: {write the concluding paragraph here}
             'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
         },
         body: JSON.stringify({
-          model: "gpt-4",
+          model: "gpt-3.5-turbo",
           messages: [
               {
                   role: 'system',
@@ -45,7 +47,7 @@ Conclusion: {write the concluding paragraph here}
                   content: prompt
               }
           ],
-          max_tokens: 900,
+          max_tokens: 800,
           temperature: 0,
           })
           
