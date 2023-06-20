@@ -111,7 +111,7 @@ function Login() {
         <div className="mt-2 text-center">
                 <Link legacyBehavior href={`/signup`}>
                     <a className="font-medium text-black hover:text-amber-500">
-                        Don't have an account? Sign up
+                        Don&apos;t have an account? Sign up
                     </a>
                 </Link>
             </div>
