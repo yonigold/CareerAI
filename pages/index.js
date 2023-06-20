@@ -3,6 +3,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Head from 'next/head'
 import { useAuth } from '@/context/AuthContext'
+import Image from 'next/image'
 
 export default function Home() {
     const { currentUser } = useAuth();
@@ -49,10 +50,12 @@ export default function Home() {
       target="_blank" 
       rel="noopener noreferrer"
     >
-      <img 
-        src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=398003&theme=light" 
+      <Image
+        src={"https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=398003&theme=light"}
         alt="CareerHub&#0032;AI - One&#0045;stop&#0032;platform&#0032;for&#0032;your&#0032;career | Product Hunt" 
         style={{width: '250px', height: '54px'}} 
+        width={350}
+        height={104}
         className='mx-auto mt-10'
       />
     </a></div>
@@ -64,8 +67,8 @@ export default function Home() {
         <div key={index} className="border-4 border-white rounded-lg p-12 w-full md:w-97 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
             <h3 className="text-3xl font-bold text-black mb-4">{i.title}</h3>
             <p className="text-black mb-6">{i.subtitle}</p>
-            <img className="w-18 h-18 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
-            src={i.img}
+            <Image className="w-18 h-18 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
+            src={i.img} width={102} height={102}
             />
             <div className="flex justify-center">
                 <Link legacyBehavior href={`/${i.page}`}>
@@ -83,8 +86,8 @@ export default function Home() {
         <div key={index} className="border-4 border-white rounded-lg p-12 w-full md:w-97 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
             <h3 className="text-3xl font-bold text-black mb-4">{i.title}</h3>
             <p className="text-black mb-6">{i.subtitle}</p>
-            <img className="w-18 h-18 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
-            src={i.img}
+            <Image className="w-18 h-18 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
+            src={i.img} width={102} height={102}
             />
             <div className="flex justify-center">
                 <Link legacyBehavior href={`/${i.page}`}>

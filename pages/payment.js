@@ -25,7 +25,7 @@ function Payment() {
         } else if (!currentUser) {
             router.push('/login')
         }
-    }, [currentUser])
+    }, [currentUser, router])
 
     
     const createOrder = async (data, actions) => {
