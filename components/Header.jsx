@@ -3,6 +3,7 @@ import BuyMeACoffee from './BuyMeACoffee'
 import { useAuth } from '@/context/AuthContext'
 import { useState, useEffect } from 'react'
 
+
 function Header() {
   const { logout, currentUser } = useAuth()
   const [hasPaid, setHasPaid] = useState(false)
@@ -68,6 +69,7 @@ function Header() {
               </a>
             </Link>
           </button>
+    
         </>
       )}
     </div>

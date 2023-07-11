@@ -110,5 +110,3 @@ exports.updatePaymentStatus = functions.https.onCall(async (data, context) => {
 
 });
 
-// sb-n0n3p25093616@personal.example.com
-// B*?r5)8V
