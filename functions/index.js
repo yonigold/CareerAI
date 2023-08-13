@@ -31,7 +31,7 @@ exports.createOrder = functions.https.onRequest((request, response) => {
                 {
                     amount: {
                         currency_code: "USD",
-                        value: "5.99"
+                        value: "9.99"
                     }
                 }
             ]

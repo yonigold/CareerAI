@@ -2,6 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer';
+import WithPaidUser from '@/components/WithPaidUser'
 
 function CareerAdvise() {
 
@@ -115,4 +116,4 @@ function CareerAdvise() {
 
 
 
-export default CareerAdvise
+export default WithPaidUser(CareerAdvise)

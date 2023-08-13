@@ -60,15 +60,15 @@ export default function Home() {
       />
     </a></div>
 
-<div className="flex flex-col md:flex-row justify-around items-center p-4 md:space-y-0 space-y-4 md:space-x-4 mt-10 lg:m-5">
+<div className="flex flex-col md:flex-row justify-around items-center p-1 md:space-y-0 space-y-4 md:space-x-4 mt-10 lg:m-5">
     {[{page: 'CareerPath', subtitle: 'let AI help you uncover career paths you might excel in based on your intrests.', title: 'Discover Career Paths', img: '/careerpath.png'}, 
-      {page: 'CareerAdvise', subtitle: 'Share your career goals and get a personalized advice to propel you forward.', title: 'Career Advise', img: '/careeradvise.png'}, 
-      {page: 'Salary', subtitle: 'Use AI to estimate your market value and how much you worth.', title: 'Know your worth', img: '/salary.png'}].map((i, index) => (
-        <div key={index} className="border-4 border-white rounded-lg p-12 w-full md:w-97 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
-            <h3 className="text-3xl font-bold text-black mb-4">{i.title}</h3>
+    {page: 'Whydoyouwanttoworkhere', subtitle: 'Get a personalized answer to the most common job application and intervieq question', title: 'Why doy you want to work here?', img: '/Whydoyouwanttoworkhere.png'}, 
+    {page: 'Salary', subtitle: 'Use AI to estimate your market value and how much you worth.', title: 'Know your worth', img: '/salary.png'}].map((i, index) => (
+        <div key={index} className="border-4 border-white rounded-lg p-6 w-full md:w-87 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
+            <h3 className="text-2xl font-bold text-black mb-4">{i.title}</h3>
             <p className="text-black mb-6">{i.subtitle}</p>
-            <Image className="w-18 h-18 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
-            src={i.img} width={102} height={102}
+            <Image className="w-17 h-17 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
+            src={i.img} width={100} height={100}
             />
             <div className="flex justify-center">
                 <Link legacyBehavior href={`/${i.page}`}>
@@ -80,9 +80,39 @@ export default function Home() {
 </div>
 
 
-<div className="flex flex-col md:flex-row justify-center items-center p-4 md:space-y-0 space-y-4 md:space-x-4 mt-10">
-    {[{page: 'coverLetter', subtitle: 'Get a personalized cover letter for your job application.', title: 'Cover Letter writer', img: '/coverpic.png'},
-    {page: 'interview', subtitle: 'Get a personalized interview questions and answers for your job interview.', title: 'Interview prep', img: '/interview.png'}].map((i, index) => (
+<div className="flex flex-col md:flex-row justify-center items-center p-4 md:space-y-0 space-y-4 md:space-x-4">
+    {[{page: 'coverLetter', subtitle: 'Get a personalized professional cover letter for your job application.', title: 'Cover Letter writer', img: '/coverpic.png'},
+    {page: 'interview', subtitle: 'Get a personalized interview questions and answers for your job interview.', title: 'Interview prep', img: '/interview.png'},
+    {page: 'CareerAdvise', subtitle: 'Share your career goals and get a personalized advice to propel you forward.', title: 'Career Advise', img: '/careeradvise.png'}, 
+    {page: 'linkedin', subtitle: 'Get professional tailor made Linkedin posts to impress and grow your network', title: 'Linkedin Posts Generator', img: '/linkedin.png'}  
+]
+    .map((i, index) => (
+        <div key={index} className="border-4 border-white rounded-lg p-8 w-full md:w-87 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
+            <h3 className="text-2xl font-bold text-black mb-4">{i.title}</h3>
+            {/* {
+                    // Display 'premium feature' badge if the user hasn't paid
+                    !(currentUser && currentUser.hasPaid) && 
+                    <span className="bg-red-500 text-white text-xs py-0.5 px-2 rounded-lg ml-2">Premium</span>
+                } */}
+            <p className="text-black mb-6">{i.subtitle}</p>
+            <Image className="w-17 h-17 rounded-full mx-auto mb-6 border-3 border-black" alt="Placeholder"
+            src={i.img} width={102} height={102}
+            />
+            <div className="flex justify-center">
+                <Link legacyBehavior href={`/${i.page}`}>
+                <a className="bg-black text-white rounded-3xl px-6 py-3 hover:bg-amber-600 hover:text-white transition-colors block text-center font-semibold w-1/2">{currentUser && currentUser.hasPaid ? 'Try now' : 'Get access'}</a>
+                </Link>
+                </div>
+                </div>
+    ))}
+</div>
+
+{/* <div className="flex flex-col md:flex-row justify-center items-center p-4 md:space-y-0 space-y-4 md:space-x-4 ">
+    {[{page: 'coverLetter', subtitle: 'Get a personalized professional cover letter for your job application.', title: 'Cover Letter writer', img: '/coverpic.png'},
+    {page: 'interview', subtitle: 'Get a personalized interview questions and answers for your job interview.', title: 'Interview prep', img: '/interview.png'},
+    {page: 'Whydoyouwanttoworkhere', subtitle: 'Why do you want to work here?', title: 'Why doy you want to work here?', img: '/interview.png'}  
+]
+    .map((i, index) => (
         <div key={index} className="border-4 border-white rounded-lg p-12 w-full md:w-97 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
             <h3 className="text-3xl font-bold text-black mb-4">{i.title}</h3>
             <p className="text-black mb-6">{i.subtitle}</p>
@@ -96,7 +126,7 @@ export default function Home() {
                 </div>
                 </div>
     ))}
-</div>
+</div> */}
 
 
 </div>

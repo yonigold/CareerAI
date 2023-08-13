@@ -6,14 +6,13 @@ export const config = {
   };
 
 
-const salary = async (req) => {
-    const { currentRole, experience, country, education } = await req.json();
-    const prompt = `As a salary advisor, consider a professional with the following details:.
-    current role: ${currentRole}
-    experience: ${experience}
-    country: ${country}
-    education: ${education}
-    Given this information, provide a general salary range that could be expected for this role, based on the last available data. No nee to add any more details.
+const linkedin = async (req) => {
+    const { role, postIdea, style } = await req.json();
+    const prompt = `As a career coach, consider a candidate who want to post on Linkedin to grow and engage with this network with the following details:.
+    role: ${role}
+    post idea: ${postIdea}
+    writing style: ${style}
+    Given this information, provide a linkedin post.No nee to add any more details.Make sure the posts are not too long, and are engaging and interesting. 1-2 paragraphs is enough.
     `;
     try {
       const response =  await fetch('https://api.openai.com/v1/chat/completions', {
@@ -27,7 +26,7 @@ const salary = async (req) => {
           messages: [
               {
                   role: 'system',
-                  content: 'You are a professional career and salary export.'
+                  content: 'You are a professional career coach which is helping people to grow their network on Linkedin.'
   
               },
               {
@@ -54,4 +53,4 @@ const salary = async (req) => {
     }
 }
 
-export default salary
+export default linkedin

@@ -2,12 +2,12 @@ import { useState } from 'react'
 import axios from 'axios'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer';
-function Salary() {
+import WithPaidUser from '@/components/WithPaidUser'
+function Linkedin  () {
 
-  const [currentRole, setCurrentRole] = useState('');
-  const [experience, setExperience] = useState('');
-  const [education, setEducation] = useState('');
-  const [country, setCountry] = useState('');
+  const [role, setRole] = useState('');
+  const [postIdea, setPostIdea] = useState('');
+  const [style, setStyle] = useState('');
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
@@ -22,10 +22,9 @@ function Salary() {
 
     // form validation
     let errorsFound = {};
-    if (!currentRole.trim()) errorsFound.currentRole = 'Field is required';
-    if (!experience.trim()) errorsFound.experience = 'Field is required';
-    if (!country.trim()) errorsFound.country = 'Field is required';
-    if (!education.trim()) errorsFound.education = 'Field is required';
+    if (!role.trim()) errorsFound.role = 'Field is required';
+    if (!postIdea.trim()) errorsFound.postIdea = 'Field is required';
+    if (!style.trim()) errorsFound.style = 'Field is required';
 
     if (Object.keys(errorsFound).length > 0) {
         setErrors(errorsFound);
@@ -38,11 +37,10 @@ function Salary() {
 
     try {
     setLoading(true);
-    const { data } = await axios.post('/api/salary', {
-      currentRole,
-      experience,
-      country,
-      education
+    const { data } = await axios.post('/api/linkedin', {
+        role,
+        postIdea,
+        style
     });
     setLoading(false);
     console.log(data.response);
@@ -60,9 +58,9 @@ function Salary() {
     <Header />
 
     <div className="text-center pt-10">
-    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black tracking-tighter mb-2 ">Know Your <span className='text-amber-600 underline'>Worth</span></h1>
+    <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black tracking-tighter mb-2 ">Linkedin Post <span className='text-amber-600 underline'>Generator</span></h1>
     <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black opacity-70 text-center">
-        Let AI estimate what you should be earning based on your experience, skills, and location.
+        Let AI help you grow your network on linkedin and get more job opportunities.
     </h2>
 </div>
 
@@ -71,36 +69,34 @@ function Salary() {
         <form onSubmit={handleSubmit}>
             <label className="block mb-2 text-black font-bold text-lg">Your current role</label>
             <input className="mb-4 w-full p-2 border-2 border-black rounded-lg"
-            value = {currentRole}
-            onChange={(e) => setCurrentRole(e.target.value)}
+            value = {role}
+            onChange={(e) => setRole(e.target.value)}
             placeholder='e.g. Software Engineer'
             max={50}
           />
-          {errors.currentRole && <p className="text-red-500">{errors.currentRole}</p>}
-            <label className="block mb-2 text-black font-bold text-lg">What is your experience?</label>
+          {errors.role && <p className="text-red-500">{errors.role}</p>}
+            <label className="block mb-2 text-black font-bold text-lg">What is your post idea?</label>
             <input className="mb-4 w-full p-2 h-12 border-2 border-black rounded-lg"
-            value={experience}
-            onChange={(e) => setExperience(e.target.value)}
-            placeholder='e.g. 5 years'
-            max={40}
+            value={postIdea}
+            onChange={(e) => setPostIdea(e.target.value)}
+            placeholder='e.g. I am looking for a new job'
+            max={400}
             />
-            {errors.experience && <p className="text-red-500">{errors.experience}</p>}
-            <label className="block mb-2 text-black font-bold text-lg">What is your education?</label>
-            <input className="mb-4 w-full p-2 h-12 border-2 border-black rounded-lg"
-            value={education}
-            onChange={(e) => setEducation(e.target.value)}
-            placeholder='e.g. Bachelor degree in Computer Science'
-            max={40}
-            />
-            {errors.education && <p className="text-red-500">{errors.education}</p>}
-            <label className="block mb-2 text-black font-bold text-lg">Country</label>
-            <input className="w-full p-2 h-12 border-2 border-black rounded-lg"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            placeholder='e.g. United States'
-            max={40}
-            />
-            {errors.country && <p className="text-red-500">{errors.country}</p>}
+            {errors.postIdea && <p className="text-red-500">{errors.postIdea}</p>}
+            <label className="block mb-2 text-black font-bold text-lg">What is your writing style?</label>
+            <select 
+  className="mb-4 w-full p-2 border-2 border-black rounded-lg"
+  value={style}
+  onChange={(e) => setStyle(e.target.value)}
+  >
+    <option value="">Select your writing style</option>
+    <option value="formal">Formal</option>
+    <option value="casual">Casual</option>
+    <option value="funny">Funny</option>
+    <option value="professional">Professional</option>
+
+  </select>
+            {errors.style && <p className="text-red-500">{errors.style}</p>}
             <button className="mt-4 bg-amber-500 text-white rounded-3xl px-6 py-2 hover:bg-amber-700 transition-colors">Submit</button>
         </form>
     </div>
@@ -124,4 +120,4 @@ function Salary() {
   )
 }
 
-export default Salary
+export default WithPaidUser(Linkedin)

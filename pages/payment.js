@@ -88,11 +88,12 @@ function Payment() {
                     Premium Plan
                 </div>
                 <div className="text-gray-600 text-center mb-8">
-                    Unlock all our premium features for just $5.99 lifetime.
+                    Unlock our premium features for just $9.99 one time payment!
                 </div>
 
                 <ul className="text-gray-600 text-lg leading-relaxed">
                     <li className="mb-2">- Access to the cover letter & interview prep tools</li>
+                    <li className="mb-2">- Access to the Linkedin post generator</li>
                     <li className="mb-2">- Unlimited use of all the tools</li>
                     <li className="mb-2">- Access to all future updates</li>
                     <li className="mb-6">- One time payment, Lifetime access</li>

@@ -6,14 +6,14 @@ export const config = {
   };
 
 
-const salary = async (req) => {
-    const { currentRole, experience, country, education } = await req.json();
-    const prompt = `As a salary advisor, consider a professional with the following details:.
-    current role: ${currentRole}
-    experience: ${experience}
-    country: ${country}
-    education: ${education}
-    Given this information, provide a general salary range that could be expected for this role, based on the last available data. No nee to add any more details.
+const whydoyouwanttoworkhere = async (req) => {
+    const { company, companyDescription, role, roleDescription } = await req.json();
+    const prompt = `As a career coach, consider a candidate who want to apply to a job with the following details:.
+    company: ${company}
+    company description: ${companyDescription}
+    role: ${role}
+    role description: ${roleDescription}
+    Given this information, provide a specific answer to the question "Why do you want to work here?" that could be expected for this role and for this data. No nee to add any more details.
     `;
     try {
       const response =  await fetch('https://api.openai.com/v1/chat/completions', {
@@ -27,7 +27,7 @@ const salary = async (req) => {
           messages: [
               {
                   role: 'system',
-                  content: 'You are a professional career and salary export.'
+                  content: 'You are a professional career coach which is helping a candidate to prepare for an interview.'
   
               },
               {
@@ -54,4 +54,4 @@ const salary = async (req) => {
     }
 }
 
-export default salary
+export default whydoyouwanttoworkhere 
