@@ -62,7 +62,7 @@ function Whydoyouwanttoworkhere() {
     <div className="text-center pt-10">
     <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black tracking-tighter mb-2 ">Why do you want to work <span className='text-amber-600 underline'>here ?</span></h1>
     <h2 className="text-lg md:text-xl lg:text-2xl font-semibold text-black opacity-70 text-center">
-        Simply fill out the form below and we will generate a specific answer to the question "Why do you want to work here?" One of the most common interview and application questions.
+    Simply fill out the form below and we will generate a specific answer to the question &ldquo;Why do you want to work here?&rdquo; One of the most common interview and application questions.
         
     </h2>
 </div>
