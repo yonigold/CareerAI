@@ -62,7 +62,7 @@ export default function Home() {
 
 <div className="flex flex-col md:flex-row justify-around items-center p-1 md:space-y-0 space-y-4 md:space-x-4 mt-10 lg:m-5">
     {[{page: 'CareerPath', subtitle: 'let AI help you uncover career paths you might excel in based on your intrests.', title: 'Discover Career Paths', img: '/careerpath.png'}, 
-    {page: 'Whydoyouwanttoworkhere', subtitle: 'Get a personalized answer to the most common job application and intervieq question', title: 'Why doy you want to work here?', img: '/Whydo.png'}, 
+    {page: 'Whydoyouwanttoworkhere', subtitle: 'Get a personalized answer to the most common job application and intervieq question', title: 'Why doy you want to work here?', img: '/Why.png'}, 
     {page: 'Salary', subtitle: 'Use AI to estimate your market value and how much you worth.', title: 'Know your worth', img: '/salary.png'}].map((i, index) => (
         <div key={index} className="border-4 border-white rounded-lg p-6 w-full md:w-87 h-auto text-center shadow-2xl border-2 border-black transition-colors duration-500 ease-in-out hover:border-black">
             <h3 className="text-2xl font-bold text-black mb-4">{i.title}</h3>
