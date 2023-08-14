@@ -4,9 +4,52 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 import { useAuth } from '@/context/AuthContext'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
     const { currentUser } = useAuth();
+    // const [showModal, setShowModal] = useState(false);
+    // useEffect(() => {
+    //     const timer = setTimeout(() => {
+    //         setShowModal(true);
+    //     }, 15000);
+
+    //     return () => clearTimeout(timer);
+    // }, []);
+
+    // function Modal({ onClose }) {
+    //     return (
+    //         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+    //             <div className="bg-white p-8 rounded-md shadow-xl w-4/5 md:w-1/2 lg:w-1/3">
+    //                 <h2 className="text-2xl font-bold text-black mb-4">Want to land a job in tech?</h2>
+    //                 <p className="text-black mb-6">
+    //                     Check out our new webs
+    //                 </p>
+    //                 <a 
+    //                     href="YOUR_OTHER_WEBSITE_URL_HERE" 
+    //                     target="_blank" 
+    //                     rel="noopener noreferrer"
+    //                     className="bg-amber-500 text-white rounded-3xl px-6 py-3 hover:bg-amber-600 transition-colors block text-center font-semibold mb-4"
+    //                 >
+    //                     Visit Now
+    //                 </a>
+    //                 <button 
+    //                     onClick={onClose} 
+    //                     className="bg-black text-white rounded-3xl px-6 py-3 hover:bg-gray-700 transition-colors block text-center font-semibold"
+    //                 >
+    //                     Close
+    //                 </button>
+    //             </div>
+    //         </div>
+    //     );
+    // }
+    
+    
+    
+    
+    
+    
+    
   return (
    <>
     <Head>
@@ -83,7 +126,7 @@ export default function Home() {
 <div className="flex flex-col md:flex-row justify-center items-center p-4 md:space-y-0 space-y-4 md:space-x-4">
     {[{page: 'coverLetter', subtitle: 'Get a personalized professional cover letter for your job application.', title: 'Cover Letter writer', img: '/coverpic.png'},
     {page: 'interview', subtitle: 'Get a personalized interview questions and answers for your job interview.', title: 'Interview prep', img: '/interview.png'},
-    {page: 'CareerAdvise', subtitle: 'Share your career goals and get a personalized advice to propel you forward.', title: 'Career Advise', img: '/careeradvise.png'}, 
+    {page: 'CareerAdvise', subtitle: 'Share your career goals and get a personalized advice to propel you forward.', title: 'Career Advice', img: '/careeradvise.png'}, 
     {page: 'linkedin', subtitle: 'Get professional tailor made Linkedin posts to impress and grow your network', title: 'Linkedin Posts Generator', img: '/linkedin.png'}  
 ]
     .map((i, index) => (
@@ -127,6 +170,8 @@ export default function Home() {
                 </div>
     ))}
 </div> */}
+
+{/* {showModal && <Modal onClose={() => setShowModal(false)} />} */}
 
 
 </div>
